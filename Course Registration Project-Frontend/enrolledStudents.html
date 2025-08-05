@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enrolled Students</title>
+    <script type="text/javascript" src="reload.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+        }
+
+        .table-container {
+            width: 80%;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        th {
+            background-color: #0066cc;
+            color: white;
+            padding: 16px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        td {
+            background-color: #e6f2ff;
+            padding: 14px;
+            text-align: center;
+            font-size: 15px;
+            color: #333;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f0f8ff;
+        }
+
+        tr:hover td {
+            background-color: #d0e7ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table-container">
+        <h2>Enrolled Students</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Email ID</th>
+                    <th>Course Name</th>
+                </tr>
+            </thead>
+            <tbody id="studenttable">
+                <!-- dynamically filled from reload.js -->
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            showenrolledstudents(); // defined in reload.js
+        };
+    </script>
+
+</body>
+</html>
